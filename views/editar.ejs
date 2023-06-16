@@ -1,0 +1,42 @@
+<%- include ('layouts/header.js') -%>
+
+  </head>
+  <body>
+    <br>
+    <div class="container">
+      <h1><%= title %></h1>
+     
+      <br>
+
+
+
+      <div class="mb-3">
+        <form method="POST" action="/editar">
+            <input class="form-control" id="id" name="id" value="<%= ilustraciones.id %>"></input> 
+          <label class="form-label">Title</label>
+          <input class="form-control" id="nombre" name="nombre" value="<%= ilustraciones.nombre %>" ></input>
+        </div>
+        <div class="mb-3">
+          <label class="form-label" >Image</label>
+          <input class="form-control" id="imagen" name="imagen" value="<%= ilustraciones.imagen %>" ></input>
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">Description</label>
+          <textarea class="form-control" name="descripcion" id="descripcion" rows="3"><%= ilustraciones.descripcion %></textarea>
+        </div>
+        <label class="form-label" value="<%= ilustraciones.franquicia %>" >Franchise</label>
+       
+        <select class="form-select" name="franquicia" id="franquicia">
+          <option value="Sonic The Hedgehog/Sonic.exe Creepypasta">Sonic The Hedgehog/Sonic.exe Creepypasta</option>
+          <option value="Villainous">Villainous (Cartoon Network)</option>
+          <option value="Villainous">Dragon Ball Z/Super/GT/AF</option>
+        </select> 
+            <br>    
+            
+            <button type="submit" class="btn button-submit" style="width: 49.5%;">Update</button>
+            <a href="/" class="btn btn-dark" style="width: 49.5%;">Cancel</a>
+          </form>
+        </div>
+  
+
+  </div>

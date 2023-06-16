@@ -1,0 +1,47 @@
+<%- include ('layouts/header.js') -%>
+
+  </head>
+  <body>
+
+    <div class="container">
+      <br>
+        <h1><%= title %></h1><br>
+  
+
+
+        <div class="mb-3">
+          <form method="POST" action="/crear">
+            <label class="form-label">Title</label>
+            <input class="form-control" id="nombre" name="nombre" ></input>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" >Image</label>
+            <input class="form-control" id="imagen" name="imagen" ></input>
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Description</label>
+            <textarea class="form-control" name="descripcion" id="descripcion" rows="3"></textarea>
+          </div>
+          <label class="form-label">Franchise</label>
+         
+          <select class="form-select" name="franquicia" id="franquicia">
+            <option value="Sonic The Hedgehog/Sonic.exe Creepypasta">Sonic The Hedgehog/Sonic.exe Creepypasta</option>
+            <option value="Villainous">Villainous (Cartoon Network)</option>
+            <option value="Villainous">Dragon Ball Z/Super/GT/AF</option>
+          </select> 
+              <br>    
+              
+              <button type="submit" class="btn button-submit" style="width: 49.5%;">Register</button>
+              <a href="/administrar" class="btn btn-dark" style="width: 49.5%;">Cancel</a>
+            </form>
+          </div>
+    
+    
+  
+
+    </div>
+
+    
+  </body><br>
+  <%- include ('layouts/footer.js') -%>
+</html>

@@ -1,0 +1,35 @@
+<%- include ('layouts/header.js') -%>
+
+  </head>
+  <body>
+
+    <div class="container">
+      <br>
+        <h1><%= title %></h1><br>
+  
+
+
+        <div class="mb-3">
+          <form method="POST" action="/login">
+            <label class="form-label">Email</label>
+            <input class="form-control" id="correo" name="correo" ></input>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" >Password</label>
+            <input class="form-control" id="contrasena" name="contrasena" ></input>
+         
+              <br>    
+              
+              <button type="submit" class="btn button-submit" style="width: 100%;">Log in</button>
+            </form>
+          </div>
+    
+    
+  
+
+    </div>
+
+    
+  </body><br>
+  <%- include ('layouts/footer.js') -%>
+</html>

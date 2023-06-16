@@ -1,0 +1,56 @@
+<%- include ('layouts/header.js') -%>
+
+  </head>
+  <body>
+    <br>
+    <div class="container">
+      <h1><%= title %></h1>
+     
+      <br>
+
+<p>In the following section you can modify the gallery section.Below is a table with the titles of the illustrations. 
+  <br>Press <i>Edit</i> to modify the information, <i>Delete</i> to delete from the gallery. If you want to upload a new illustration, select <i>Upload</i>.</p>
+<br>
+      <table class="table table-dark table-borderless mb-0">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Title</th>
+            <th scope="col">Options</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var i=0; i<ilustraciones.length; i++) { %>
+          <tr>
+            <th scope="row"><%= ilustraciones[i].id %></th>
+            <td><%= ilustraciones[i].nombre %></td>
+            <td>
+              
+              <a href="/editar/<%= ilustraciones[i].id %>" class="btn btn-dark">Edit</a>
+              <a href="/borrar/<%= ilustraciones[i].id %>" class="btn btn-light">Delete</a></td>
+            
+          </tr>
+          <% } %>
+        </tbody>
+      
+      </table><br>
+      <a href="/registrar" class="btn button-submit" style="width: 49.5%;">Upload</a>
+      <a href="/inicio" class="btn btn-dark" style="width: 49.5%;">Cancel</a>
+      <br>
+
+
+      
+  </div>
+
+   
+</body><br>
+<%- include ('layouts/footer.js') -%>
+
+</html>
+
+
+
+
+
+
+

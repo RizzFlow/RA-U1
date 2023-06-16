@@ -1,0 +1,50 @@
+<%- include ('layouts/header.js') -%>
+
+  </head>
+  <body>
+    <div class="container">
+
+      <br>
+
+ 
+      <div class="row align-items-start">
+      <h1><%= title %></h1> <br>
+
+      <p>This section allows a view of the digital art, a brief description of it and the category to which it belongs.</p>
+
+      
+      <% for(var i=0; i<ilustraciones.length; i++) { %>
+
+
+        
+        <div class="card cardi" style="width: 40rem; padding:1rem; margin-left: 4px; margin-right: 4px; margin-bottom: 10px;">
+          <img src="<%= ilustraciones[i].imagen %>" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title"><%= ilustraciones[i].nombre %></h5><br>
+            <p class="card-text"><%= ilustraciones[i].descripcion %></p>
+          </div>
+          <div class="card-body">
+            <p class="card-text"><%= ilustraciones[i].franquicia %></p>
+          </div>
+        </div>
+    
+
+        <% } %>
+
+      </div>
+    </div>
+
+      <br>
+
+
+
+
+
+
+
+
+    
+    
+  </body><br>
+  <%- include ('layouts/footer.js') -%>
+</html>
